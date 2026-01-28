@@ -1,0 +1,14 @@
+ME21N is used to create a Purchase Order in SAP Materials Management (MM).
+ME23N is used to display an existing Purchase Order.
+ME22N is used to change a Purchase Order.
+
+FB60 is used to enter a vendor invoice in SAP Financial Accounting (FI).
+FB03 is used to display accounting documents.
+
+To raise an SAP access request:
+1. Identify the required role.
+2. Check for SoD conflicts.
+3. Submit the request via SAP GRC or access management system.
+4. Wait for manager and security approvals.
+
+Segregation of Duties (SoD) ensures that critical tasks are divided among different users to prevent fraud.

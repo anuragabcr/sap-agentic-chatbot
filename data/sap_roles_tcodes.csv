@@ -1,0 +1,7 @@
+role,tcode,description
+Z_MM_USER,ME21N,Create Purchase Order
+Z_MM_USER,ME22N,Change Purchase Order
+Z_MM_USER,ME23N,Display Purchase Order
+Z_FI_DISPLAY,FB03,Display Accounting Document
+Z_FI_POST,FB60,Enter Vendor Invoice
+Z_HR_USER,PA30,HR Master Data

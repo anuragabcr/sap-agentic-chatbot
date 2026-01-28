@@ -1,0 +1,12 @@
+[
+  {
+    "conflict_roles": ["Z_MM_USER", "Z_FI_POST"],
+    "risk_level": "High",
+    "description": "Procurement and invoice posting conflict"
+  },
+  {
+    "conflict_tcodes": ["ME21N", "FB60"],
+    "risk_level": "High",
+    "description": "PO creation and vendor invoice posting"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "request_id": "REQ1001",
+    "user": "ANURAG_K",
+    "requested_role": "Z_MM_DISPLAY",
+    "status": "Approved"
+  },
+  {
+    "request_id": "REQ1002",
+    "user": "RAHUL_P",
+    "requested_role": "Z_FI_POST",
+    "status": "Pending"
+  }
+]
