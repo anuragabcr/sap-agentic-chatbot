@@ -1,5 +1,6 @@
 import requests
-from sap.base import SAPClientBase
+from app.sap_agent.sap.base import SAPClientBase
+
 
 class ODataSAPClient(SAPClientBase):
 

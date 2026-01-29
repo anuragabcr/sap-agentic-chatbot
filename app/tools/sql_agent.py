@@ -1,26 +1,28 @@
-from langchain_community.utilities import SQLDatabase
-from langchain_community.agent_toolkits import SQLDatabaseToolkit
-from langchain_openai import ChatOpenAI
-from langchain.agents import create_sql_agent
+from sqlalchemy import text
+from app.db.db_connection import engine
 
-from db.db_connection import engine
+class MockSQLAgent:
+    def invoke(self, query: str):
+        q = query.lower()
 
-llm = ChatOpenAI(
-    model="gpt-4o-mini",
-    temperature=0
-)
+        if "t-code" in q or "tcode" in q:
+            sql = """
+            SELECT TCODE FROM AGR_TCODES
+            WHERE AGR_NAME = 'Z_MM_USER'
+            """
+        elif "role" in q and "anurag" in q:
+            sql = """
+            SELECT AGR_NAME FROM AGR_USERS
+            WHERE UNAME = 'ANURAG'
+            """
+        else:
+            return {"output": "Query not supported"}
 
-db = SQLDatabase(engine)
+        with engine.connect() as conn:
+            rows = conn.execute(text(sql)).fetchall()
 
-sql_toolkit = SQLDatabaseToolkit(
-    db=db,
-    llm=llm
-)
+        return {
+            "output": ", ".join(r[0] for r in rows)
+        }
 
-sql_tools = sql_toolkit.get_tools()
-
-sql_agent = create_sql_agent(
-    llm=llm,
-    toolkit=sql_toolkit,
-    verbose=True
-)
+sql_agent = MockSQLAgent()

@@ -1,4 +1,4 @@
-from sap.mock_client import MockSAPClient
+from app.sap_agent.sap.mock_client import MockSAPClient
 
 sap_client = MockSAPClient()
 

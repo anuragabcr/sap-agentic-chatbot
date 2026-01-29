@@ -1,4 +1,4 @@
-from sap.base import SAPClientBase
+from app.sap_agent.sap.base import SAPClientBase
 
 MOCK_USERS = {
     "anurag": ["Z_MM_DISPLAY", "Z_FI_AP_CLERK"],
